@@ -61,7 +61,7 @@ if __name__ == '__main__':
         headers = cf.header_info
         cookies = get_new_cookie()
         headers['Cookie'] = cookies
-        print headers
+        # print headers
 
         res_dic = crawlUtil.get_data_with_header(cf.crawl_url,headers)
         res_data = res_dic['data']

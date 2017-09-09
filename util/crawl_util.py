@@ -43,24 +43,25 @@ if __name__ == '__main__':
 
 
     headers = {
-        'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-        'Accept-Encoding':'gzip, deflate',
-        'Accept-Language':'zh-CN,zh;q=0.8,en;q=0.6',
-        'Cache-Control':'max-age=0',
-        'Connection':'keep-alive',
-        'Cookie':'__jsluid=b03eda058b972ee78117931728347242; PHPSESSID=i25qqs661eqmj1fb9771qu80g7; sYQDUGqqzHsearch_history=%u8D77%u8BC9%u4E66%7C; __jsl_clearance=1502180960.679|0|mCVhEFoCpL%2B8ioUK55i9h47Vq88%3D; Hm_lvt_2e64cf4f6ff9f8ccbe097650c83d719e=1502099288; Hm_lpvt_2e64cf4f6ff9f8ccbe097650c83d719e=1502180968; sYQDUGqqzHpid=page_0; sYQDUGqqzHtid=tab_0',
-        'Host':'www.ajxxgk.jcy.gov.cn',
-        'If-Modified-Since':'Mon, 07 Aug 2017 09:21:20 GMT',
-        'If-None-Match':'W/\"310b8f-6d6d-556265ea64acf\"',
-        'Referer':'http://www.ajxxgk.jcy.gov.cn/index.php?m=search&c=index&a=init&typeid=&siteid=1&q=%E8%B5%B7%E8%AF%89%E4%B9%A6',
-        'Upgrade-Insecure-Requests':'1',
-        'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
-
+        "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+        "Accept-Encoding":"gzip, deflate",
+        "Accept-Language":"zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4",
+        "Cache-Control":"no-cache",
+        "Connection":"keep-alive",
+        "Cookie":"__jsl_clearance=1504966913.336|0|dZVeCwMNZC%2FCaT0w5wLzpqf6IgA%3D; __jsluid=7d10b9d772d982dfbcda279fca44c2ff",
+        "Host":"www.ajxxgk.jcy.gov.cn",
+        "Pragma":"no-cache",
+        "Referer":"http://www.ajxxgk.jcy.gov.cn/index.php?m=search&c=index&a=init&typeid=&siteid=1&q=%E8%B5%B7%E8%AF%89%E4%B9%A6&page=1",
+        "Upgrade-Insecure-Requests":"1",
+        "User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
     }
 
 
-    res = requests.session().get('http://www.ajxxgk.jcy.gov.cn/index.php?m=search&c=index&a=init&typeid=&siteid=1&q=%E8%B5%B7%E8%AF%89%E4%B9%A6', headers=headers)
-    print res.content
+    s = requests.session();
+    #s.cookies.set('__jsluid','b635d57aac832ae2965dc0f0b9e08e6d');
+    #s.cookies.set('__jsl_clearance','1504936895.309|0|vBoZIhocTd%2Bx6Mgbwj4dTwC4IRE%3D');
+    res = s.get('http://www.ajxxgk.jcy.gov.cn/index.php?m=search&c=index&a=init&typeid=&siteid=1&q=%E8%B5%B7%E8%AF%89%E4%B9%A6', headers=headers)
+    print res
 
 
 
